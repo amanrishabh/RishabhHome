@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="header_admin_img">
+        <img src="https://www.rishabhsoft.com/wp-content/uploads/2020/07/Youtube-800x800-1.png"> </span>
+      <span class="main_header_title">Rishabh Home</span>
+  
+      <span class="example-spacer"></span>
+     
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>person_outline</mat-icon>
+          <span (click)="profile()" routerLink="/Profile"> Profile </span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>power_settings_new</mat-icon>
+          <span (click)="logout()" routerLink="/login"> Logout </span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>

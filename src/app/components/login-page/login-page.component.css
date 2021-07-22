@@ -1,0 +1,26 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+
+  .logo_company_header{
+    font-size: 21px;
+    color: #00205c;
+    font-weight: 600;
+  }
+
+  .register_text{
+    cursor: pointer;
+    font-size: 13px;
+    padding: 12px;
+    font-weight: 500;
+  }
+  .login_window{
+    float: left;
+    width: 100%;
+  }

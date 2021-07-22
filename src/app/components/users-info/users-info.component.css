@@ -1,0 +1,15 @@
+  /* Structure */
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .tablewrapper{
+    height: 500px;
+    margin-bottom: 64px;
+    overflow: auto;
+    
+  }

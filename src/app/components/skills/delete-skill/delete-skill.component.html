@@ -1,0 +1,16 @@
+<p>
+<div class="model_delete">
+  <div class="Modal_header">
+    <h2> Delete {{this.confrimdata.body}}</h2>
+  </div>
+  <div class="Modal_content">
+    <div class="Modal_explanation">
+      Are you sure you want to delete Your {{this.confrimdata.body}}?
+    </div>
+  </div>
+  <div class="Modal_delete_footer">
+    <button mat-stroked-button color="primary" (click)="deleteResponse('no')"
+      class="cancle_deelete_button">Cancel</button>
+    <button mat-stroked-button color="warn" (click)="deleteResponse('yes')" class="uppercase_button">delete</button>
+  </div>
+</div>

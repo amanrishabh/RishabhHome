@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .header_admin_img img{
+      width: 58px;
+      height: 58px;
+  }
+

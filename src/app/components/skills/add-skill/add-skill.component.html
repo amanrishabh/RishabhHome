@@ -1,0 +1,40 @@
+<div class="login_window">
+  <div style="cursor: pointer; font-weight: 600;" (click)="cancel()"> Close</div>
+  <div style="text-align: center;">
+    <span class="logo_company_header">{{this.updateFlag}} <span class="three_five"> Skill</span> </span>
+  </div>
+  <div [formGroup]="skillListdataForm" novalidate class="form_container_wrapper">
+    <mat-card>
+      <div class="change_company_cantainer">
+        <mat-form-field appearance="outline" class="form_container">
+          <input formControlName="experience" matInput placeholder="Years of experience">
+          <mat-error *ngIf="skillListdataForm['controls'].experience.invalid">{{ErrorMessage('experience')}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form_container">
+          <mat-label>Primary Skill</mat-label>
+          <mat-select formControlName="primary_skill" multiple>
+            <mat-option *ngFor="let skillListdata of skillList" [value]="skillListdata">{{skillListdata}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="skillListdataForm['controls'].primary_skill.invalid">{{ErrorMessage('Primaryskill')}}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form_container">
+          <mat-label>Secondary Skill</mat-label>
+          <mat-select formControlName="second_skill" multiple>
+            <mat-option *ngFor="let skillListdata of skillList" [value]="skillListdata">{{skillListdata}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="skillListdataForm['controls'].second_skill.invalid">{{ErrorMessage('Secondary skill')}}
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="change_company_cantainer">
+        <div class="form_container_btn_wrapper">
+          <button *ngIf="this.updateFlag =='Save'" type="submit" [disabled]="!skillListdataForm.valid"
+            (click)="onSubmit()" mat-stroked-button color="primary"> Add Skill </button>
+          <button *ngIf="this.updateFlag =='Update'" type="submit" [disabled]="!skillListdataForm.valid"
+            (click)="onUpdate()" mat-stroked-button color="primary"> Update Skill </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

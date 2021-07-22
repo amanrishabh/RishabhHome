@@ -1,0 +1,35 @@
+<div class="login_window">
+  <div [formGroup]="sginupForm" novalidate class="form_container_wrapper">
+    <mat-card>
+      <span class="header_admin_img">
+        <img src="https://www.rishabhsoft.com/wp-content/uploads/2020/07/Youtube-800x800-1.png"> </span>
+      <div class="change_company_header">
+        <span class="logo_company_header">Rishabh <span class="three_five"> Home</span> </span>
+      </div>
+      <div class="change_company_cantainer">
+        <mat-form-field class="form_container">
+          <input formControlName="name" matInput placeholder="name">
+        </mat-form-field>
+
+        <mat-form-field class="form_container">
+          <input formControlName="email" matInput placeholder="Email">
+        </mat-form-field>
+
+        <mat-form-field class="form_container">
+          <input type="password" formControlName="password" matInput placeholder="Password">
+        </mat-form-field>
+
+        <mat-form-field class="form_container">
+          <input type="text" formControlName="phonenumber" matInput placeholder="PhoneNumber">
+        </mat-form-field>
+      </div>
+      <div class="change_company_cantainer">
+        <div class="form_container_btn_wrapper">
+          <button type="submit" [disabled]="!sginupForm.valid" (click)="onSubmit()" mat-stroked-button color="primary">
+            Register </button>
+        </div>
+        <div class="register_text" routerLinkActive="active" routerLink="/login"> Login Here</div>
+      </div>
+    </mat-card>
+  </div>
+</div>

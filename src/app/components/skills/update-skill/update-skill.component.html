@@ -1,0 +1,29 @@
+<div *ngIf="skillSetData && skillSetData.length ===0" style="margin: 12px;
+margin-left: 48px;"> <button mat-raised-button color="Warn" (click)="addSkill()">Add Skill</button></div>
+<mat-card *ngIf="skillSetData && skillSetData.length !==0" class="example-card">
+  <mat-card-header>
+    <mat-card-title>Your Skill Set</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Primary Skill</th>
+          <th>Second Skill</th>
+          <th>Experience</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let skill of skillSetData">
+          <td> {{skill.primary_skill}}</td>
+          <td> {{skill.second_skill}}</td>
+          <td> {{skill.experience}} Year</td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button color="primary" (click)="updateSkill()">Update</button>
+    <button mat-stroked-button color="Warn" (click)="deleteBlog(skillSetData[0].skill_id)">Delete</button>
+  </mat-card-actions>
+</mat-card>
